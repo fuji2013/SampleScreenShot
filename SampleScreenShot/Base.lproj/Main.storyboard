@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleScreenShot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0016.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="ANS-KH-8iZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTX-aP-fFg">
+                                <rect key="frame" x="200" y="560" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="QO7-84-VqA"/>
+                                    <constraint firstAttribute="height" constant="30" id="pg3-Xy-uE1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="スクリーンショット">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="screenShot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8F-9U-1DS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8WA-he-zHQ">
+                                <rect key="frame" x="0.0" y="350" width="600" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="1g4-Wb-XeJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ANS-KH-8iZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CWS-5j-5y9"/>
+                            <constraint firstAttribute="trailing" secondItem="8WA-he-zHQ" secondAttribute="trailing" id="GX6-9N-nDp"/>
+                            <constraint firstItem="kTX-aP-fFg" firstAttribute="top" secondItem="8WA-he-zHQ" secondAttribute="bottom" constant="10" id="IgZ-TO-S1C"/>
+                            <constraint firstAttribute="trailing" secondItem="ANS-KH-8iZ" secondAttribute="trailing" id="Ky9-m6-V9g"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kTX-aP-fFg" secondAttribute="bottom" constant="10" id="SID-dE-kOG"/>
+                            <constraint firstItem="kTX-aP-fFg" firstAttribute="top" secondItem="ANS-KH-8iZ" secondAttribute="bottom" constant="20" id="T0V-zz-JIx"/>
+                            <constraint firstItem="ANS-KH-8iZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fPI-AM-GC0"/>
+                            <constraint firstAttribute="centerX" secondItem="kTX-aP-fFg" secondAttribute="centerX" id="i8p-dg-jRV"/>
+                            <constraint firstItem="8WA-he-zHQ" firstAttribute="top" secondItem="ANS-KH-8iZ" secondAttribute="bottom" id="oUD-qw-gq9"/>
+                            <constraint firstItem="8WA-he-zHQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ofR-1e-Um6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="T0V-zz-JIx"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Sf-xd-bzN"/>
+                    <connections>
+                        <outlet property="screenShotImageView" destination="8WA-he-zHQ" id="yBW-PF-B5T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="311"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_0016.JPG" width="3264" height="2448"/>
+    </resources>
+</document>
